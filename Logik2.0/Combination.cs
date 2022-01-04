@@ -20,7 +20,7 @@ namespace Logik2._0
         {
             for(int i = 0; i < Pins.Length; i++)
             {
-                Pins[i].Draw(graphics,Pens.Black, new PointF(location.X + i * size, location.Y), size);
+                Pins[i].Draw(graphics,Pens.Black, new PointF(location.X + i * size * 1.25F, location.Y), size);
             }
         }
     }
