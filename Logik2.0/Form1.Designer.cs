@@ -38,17 +38,19 @@
             // 
             this.pBox.BackColor = System.Drawing.SystemColors.HighlightText;
             this.pBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pBox.Cursor = System.Windows.Forms.Cursors.No;
+            this.pBox.Cursor = System.Windows.Forms.Cursors.Default;
             this.pBox.Location = new System.Drawing.Point(12, 12);
             this.pBox.Name = "pBox";
-            this.pBox.Size = new System.Drawing.Size(315, 394);
+            this.pBox.Size = new System.Drawing.Size(418, 417);
             this.pBox.TabIndex = 1;
             this.pBox.TabStop = false;
+            this.pBox.Paint += new System.Windows.Forms.PaintEventHandler(this.pBox_Paint);
+            this.pBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pBox_MouseClick);
             // 
             // btnEvaluate
             // 
-            this.btnEvaluate.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.btnEvaluate.Location = new System.Drawing.Point(12, 415);
+            this.btnEvaluate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEvaluate.Location = new System.Drawing.Point(41, 435);
             this.btnEvaluate.Name = "btnEvaluate";
             this.btnEvaluate.Size = new System.Drawing.Size(144, 23);
             this.btnEvaluate.TabIndex = 2;
@@ -58,18 +60,19 @@
             // btnNewGame
             // 
             this.btnNewGame.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNewGame.Location = new System.Drawing.Point(183, 415);
+            this.btnNewGame.Location = new System.Drawing.Point(259, 435);
             this.btnNewGame.Name = "btnNewGame";
             this.btnNewGame.Size = new System.Drawing.Size(144, 23);
             this.btnNewGame.TabIndex = 3;
             this.btnNewGame.Text = "Nová hra";
             this.btnNewGame.UseVisualStyleBackColor = true;
+            this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(339, 450);
+            this.ClientSize = new System.Drawing.Size(442, 480);
             this.Controls.Add(this.btnNewGame);
             this.Controls.Add(this.btnEvaluate);
             this.Controls.Add(this.pBox);
